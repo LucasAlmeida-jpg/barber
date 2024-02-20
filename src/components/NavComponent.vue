@@ -23,33 +23,33 @@
         <li>
           <div class="d-flex align-items-center justify-content-center">
           <div class="col-2"><img class="icon" src="../assets/icons/graph.png" alt=""></div>
-          <div class="col-6"><router-link :to="{ name: 'dashboard', params: { id: 1 } }">Dashboard</router-link></div>
+          <div class="col-6 list-item"><router-link :to="{ name: 'dashboard', params: { id: 'dashboard' } }">Dashboard</router-link></div>
         </div>
       </li>
       <li>
         <div class="d-flex align-items-center justify-content-center">
           <div class="col-2"><img class="icon" src="../assets/icons/user.png" alt=""></div>
-          <div class="col-6">Clientes</div>
+          <div class="col-6 list-item"><router-link :to="{ name: 'cliente', params: { id: 'cliente' } }">Clientes</router-link></div>
         </div>
       </li>
       <li>
         <div class="d-flex align-items-center justify-content-center">
           <div class="col-2"><img class="icon" src="../assets/icons/cortes.png" alt=""></div>
-          <div class="col-6">Cortes</div>
+          <div class="col-6 list-item"><router-link :to="{ name: 'corte', params: { id: 'corte' } }">Cortes</router-link></div>
         </div>
       </li>
       <li>
         <div class="d-flex align-items-center justify-content-center">
           <div class="col-2"><img class="icon" src="../assets/icons/report.png" alt=""></div>
-          <div class="col-6">Relatórios</div>
+          <div class="col-6 list-item"><router-link :to="{ name: 'relatorio', params: { id: 'relatorio' } }">Relatorios</router-link></div>
         </div>
       </li>
      </ul>
     </div>
   </div>
-  <div class="container">
+  <div class="container dash">
     <div class="row">
-      <div class="col-md-12 bg-success">
+      <div class="col-md-12">
         <router-view />
       </div>
     </div>

@@ -50,15 +50,13 @@ body {
 .offcanvas {
   position: fixed;
   bottom: 0;
-  padding-top: 70px;
-  z-index: -1 !important;
   display: flex;
   flex-direction: column;
   max-width: 100%;
-}
-
-.offcanvas-header{
-  padding-top: 25px !important;
+  background-color: #7553e2 !important;
+  border: none !important;
+  color: white !important;
+  
 }
 
 .icon {
@@ -75,4 +73,9 @@ body {
   text-decoration: underline;
   color: #7553e2;
   cursor: pointer;
+}
+
+.offcanvas a{
+  text-decoration: none;
+    color: white;
 }
