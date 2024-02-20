@@ -20,7 +20,7 @@
     </div>
     <div class="offcanvas-body">
      <ul>
-      <li>
+        <li>
         <div class="d-flex align-items-center justify-content-center">
           <div class="col-2"><img class="icon" src="../assets/icons/graph.png" alt=""></div>
           <div class="col-6">Dashboard</div>
