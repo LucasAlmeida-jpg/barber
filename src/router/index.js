@@ -1,3 +1,4 @@
+
 import { createRouter, createWebHistory } from 'vue-router'
 import All from '../views/All.vue'
 import Client from '../views/Client.vue'
@@ -20,14 +21,18 @@ const router = createRouter({
     {
       path: '/admin',
       name: 'admin',
-      component: Admin
-    },  
-    {
-      path: '/admin/dashboard',
-      name: 'dashboard',
-      component: Dashboard
+      component: Admin,
+      children: [
+        {
+          path: 'dashboard/:id', 
+          name: 'dashboard',
+          component: Dashboard,
+          props: true,
+        },
+      ]
     },  
   ]
 })
 
-export default router
+export default router;
+

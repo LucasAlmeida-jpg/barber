@@ -21,9 +21,9 @@
     <div class="offcanvas-body">
      <ul>
         <li>
-        <div class="d-flex align-items-center justify-content-center">
+          <div class="d-flex align-items-center justify-content-center">
           <div class="col-2"><img class="icon" src="../assets/icons/graph.png" alt=""></div>
-          <div class="col-6">Dashboard</div>
+          <div class="col-6"><router-link :to="{ name: 'dashboard', params: { id: 1 } }">Dashboard</router-link></div>
         </div>
       </li>
       <li>
@@ -45,6 +45,13 @@
         </div>
       </li>
      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 bg-success">
+        <router-view />
+      </div>
     </div>
   </div>
 </template>
