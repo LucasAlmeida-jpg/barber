@@ -25,6 +25,7 @@ body {
 
 .navbar{
   background-color: #7553e2;
+  padding: 20px !important;
 }
 
 .navbar .btn{
@@ -49,9 +50,29 @@ body {
 .offcanvas {
   position: fixed;
   bottom: 0;
-  padding-top: 64px;
+  padding-top: 70px;
   z-index: -1 !important;
   display: flex;
   flex-direction: column;
   max-width: 100%;
+}
+
+.offcanvas-header{
+  padding-top: 25px !important;
+}
+
+.icon {
+  width: 18px;
+}
+
+.offcanvas-body ul li {
+  list-style: none;
+  padding: 20px 0px !important;
+  
+}
+
+.offcanvas-body ul li:hover{
+  text-decoration: underline;
+  color: #7553e2;
+  cursor: pointer;
 }

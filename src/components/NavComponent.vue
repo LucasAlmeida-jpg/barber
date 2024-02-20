@@ -15,11 +15,36 @@
   <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
     id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel"></h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <p>Try scrolling the rest of the page to see this option in action.</p>
+     <ul>
+      <li>
+        <div class="d-flex align-items-center justify-content-center">
+          <div class="col-2"><img class="icon" src="../assets/icons/graph.png" alt=""></div>
+          <div class="col-6">Dashboard</div>
+        </div>
+      </li>
+      <li>
+        <div class="d-flex align-items-center justify-content-center">
+          <div class="col-2"><img class="icon" src="../assets/icons/user.png" alt=""></div>
+          <div class="col-6">Clientes</div>
+        </div>
+      </li>
+      <li>
+        <div class="d-flex align-items-center justify-content-center">
+          <div class="col-2"><img class="icon" src="../assets/icons/cortes.png" alt=""></div>
+          <div class="col-6">Cortes</div>
+        </div>
+      </li>
+      <li>
+        <div class="d-flex align-items-center justify-content-center">
+          <div class="col-2"><img class="icon" src="../assets/icons/report.png" alt=""></div>
+          <div class="col-6">Relatórios</div>
+        </div>
+      </li>
+     </ul>
     </div>
   </div>
 </template>
