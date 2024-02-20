@@ -12,7 +12,7 @@
           <label for="floatingPassword">Senha</label>
         </div>
         <RouterLink :to="{ path: '/client' }"><button class="btn me-5">Cliente</button></RouterLink>
-        <RouterLink :to="{ path: '/admin/dashboard/' + id }"><button class="btn">Barbeiro</button></RouterLink>
+        <RouterLink :to="{ path: '/admin/' + id }"><button class="btn">Barbeiro</button></RouterLink>
       </form>
     </div>
   </main>

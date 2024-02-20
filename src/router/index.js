@@ -26,25 +26,25 @@ const router = createRouter({
       component: Admin,
       children: [
         {
-          path: 'dashboard/:id', 
+          path: ':id', 
           name: 'dashboard',
           component: Dashboard,
           props: true,
         },
         {
-          path: 'cliente/:id', 
+          path: ':id', 
           name: 'cliente',
           component: Clientes,
           props: true,
         },
         {
-          path: 'corte/:id', 
+          path: ':id', 
           name: 'corte',
           component: Cortes,
           props: true,
         },
         {
-          path: 'relatorio/:id', 
+          path: ':id', 
           name: 'relatorio',
           component: Relatorio,
           props: true,
