@@ -22,25 +22,25 @@
      <ul>
         <li>
           <div class="d-flex align-items-center justify-content-center">
-          <div class="col-2"><img class="icon" src="../assets/icons/graph.png" alt=""></div>
+          <div class="col-2"><img class="icon" src="../assets/icons/graph.png" alt="icon"></div>
           <div class="col-6 list-item"><router-link :to="{ name: 'dashboard', params: { id: 'dashboard' } }">Dashboard</router-link></div>
         </div>
       </li>
       <li>
         <div class="d-flex align-items-center justify-content-center">
-          <div class="col-2"><img class="icon" src="../assets/icons/user.png" alt=""></div>
+          <div class="col-2"><img class="icon" src="../assets/icons/user.png" alt="icon"></div>
           <div class="col-6 list-item"><router-link :to="{ name: 'cliente', params: { id: 'cliente' } }">Clientes</router-link></div>
         </div>
       </li>
       <li>
         <div class="d-flex align-items-center justify-content-center">
-          <div class="col-2"><img class="icon" src="../assets/icons/cortes.png" alt=""></div>
+          <div class="col-2"><img class="icon" src="../assets/icons/cortes.png" alt="icon"></div>
           <div class="col-6 list-item"><router-link :to="{ name: 'corte', params: { id: 'corte' } }">Cortes</router-link></div>
         </div>
       </li>
       <li>
         <div class="d-flex align-items-center justify-content-center">
-          <div class="col-2"><img class="icon" src="../assets/icons/report.png" alt=""></div>
+          <div class="col-2"><img class="icon" src="../assets/icons/report.png" alt="icon"></div>
           <div class="col-6 list-item"><router-link :to="{ name: 'relatorio', params: { id: 'relatorio' } }">Relatorios</router-link></div>
         </div>
       </li>
