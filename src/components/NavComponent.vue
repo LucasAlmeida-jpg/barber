@@ -28,14 +28,14 @@
       </li>
       <li>
         <div class="d-flex align-items-center justify-content-center">
-          <div class="col-2"><img class="icon" src="../assets/icons/user.png" alt="icon"></div>
-          <div class="col-6 list-item"><router-link :to="{ name: 'cliente', params: { id: 'cliente' } }">Clientes</router-link></div>
+          <div class="col-2"><img class="icon" src="../assets/icons/santa-beard.png" alt="icon"></div>
+          <div class="col-6 list-item"><router-link :to="{ name: 'cliente', params: { id: 'cliente' } }">Barbeiros</router-link></div>
         </div>
       </li>
       <li>
         <div class="d-flex align-items-center justify-content-center">
           <div class="col-2"><img class="icon" src="../assets/icons/cortes.png" alt="icon"></div>
-          <div class="col-6 list-item"><router-link :to="{ name: 'corte', params: { id: 'corte' } }">Cortes</router-link></div>
+          <div class="col-6 list-item"><router-link :to="{ name: 'corte', params: { id: 'corte' } }">Ganhos</router-link></div>
         </div>
       </li>
       <li>
