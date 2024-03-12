@@ -10,18 +10,18 @@ import Relatorio from '../views/Relatorios.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    {
-      path: '/',
-      name: 'all',
-      component: All
-    },  
+    // {
+    //   path: '/',
+    //   name: 'all',
+    //   component: All
+    // },  
     {
       path: '/client',
       name: 'client',
       component: Client
     },    
     {
-      path: '/admin',
+      path: '/',
       name: 'admin',
       component: Admin,
       children: [

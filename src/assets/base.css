@@ -138,3 +138,13 @@ body {
   top: -20px;
   left: -20px;
 }
+
+.the-day {
+  background-color: #7553e2;
+  color: white;
+  border-radius: 40px;
+  font-style: italic;
+  font-size: 10px;
+  padding: 4px;
+  font-weight: 500;
+}

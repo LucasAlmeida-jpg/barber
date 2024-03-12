@@ -11,7 +11,7 @@
                     <div>
                         <h1 class="h-primary">Barbeiro</h1>
                         <p>Nome: Lucas Almeida</p>
-                        <p>Email: lucas@gmail.com</p>
+                        <p>Telefone: (35)9 9132-9312</p>
                     </div>
                    </div>
                 </div>
@@ -35,7 +35,7 @@
 </div>
         <div class="form-floating">
   <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-  <label for="floatingInput">Email</label>
+  <label for="floatingInput">Telefone</label>
 </div>
       </div>
       <div class="modal-footer">

@@ -4,7 +4,7 @@
         <div class="col-md-4">
             <div class="card">
                 <img class="thumb" src="../assets/icons/maquina-de-cortar-cabelo.png" alt="maquina de cortar cabelo">
-                <h1 class="h-primary">Cortes do Dia (20/02/2024)</h1>
+                <h1 class="h-primary d-flex align-items-center">Cortes do Dia <span class="the-day ms-2">20/02/2024</span></h1>
                 <p>23 Cortes</p>
                 <p>15 Barbas</p>
             </div>
