@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="row my-5 d-flex justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-8 card">
                     <canvas id="myChart"></canvas>
                 </div>
             </div>
