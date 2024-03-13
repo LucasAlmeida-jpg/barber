@@ -9,8 +9,8 @@
                     <h1 class="h-primary d-flex align-items-center">Cortes do Dia <span
                             class="the-day ms-2">20/02/2024</span></h1>
                     <div>
-                        <p>Cortes: {{ maskMoney(showTotalValue('Corte de Cabelo')) }}</p>
-                        <p>Barbas: {{ maskMoney(showTotalValue('Barba')) }}</p>
+                        <p>Ganhos (Cortes): {{ maskMoney(showTotalValue('Corte de Cabelo')) }}</p>
+                        <p>Ganhos (Barbas): {{ maskMoney(showTotalValue('Barba')) }}</p>
                     </div>
 
                     <button class="btn btn-primary position-absolute" data-bs-toggle="modal"
@@ -28,7 +28,7 @@
                     <p>Dinheiro: {{ maskMoney(showTotalPaymentMethod('Dinheiro')) }}</p>
                 </div>
             </div>
-            <div class="row my-5 d-flex justify-content-center">
+            <div class="row my-4 d-flex justify-content-center">
                 <div class="col-md-8 card">
                     <canvas id="myChart"></canvas>
                 </div>
@@ -106,6 +106,7 @@ export default {
                 data: {
                     labels: ['Crédito', 'Débito', 'Pix', 'Dinheiro'],
                     datasets: [{
+                        
                         label: 'Formas de pagamento',
                         data: [
                             this.showTotalPaymentMethod('Crédito'),
@@ -115,9 +116,17 @@ export default {
                         ],
                         borderWidth: 1,
                         backgroundColor: '#7553e2',
+                        barThickness:  40,
+                        borderRadius: 50,
                     }],
                 },
                 options: {
+                    plugins: {
+                        legend: {
+                            display: false,
+
+                        }
+                    },
                     scales: {
                         y: {
                             beginAtZero: true,
@@ -178,7 +187,7 @@ export default {
                 .filter((movement) => movement.typeService === typeService && movement.valuePerService !== null)
                 .map((movement) => movement.valuePerService);
 
-            return values.reduce((acc, val) => acc + val, 0);
+            return values.reduce((acc, val) => acc + val, 10);
         },
 
         showTotalPaymentMethod(paymentMethod) {
@@ -186,7 +195,7 @@ export default {
                 .filter((movement) => movement.paymentMethod === paymentMethod)
                 .map((movement) => movement.valuePerService);
 
-            return values.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+            return values.reduce((accumulator, currentValue) => accumulator + currentValue, 10);
         },
 
         setCurrentType(typeService) {
