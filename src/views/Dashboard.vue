@@ -28,6 +28,13 @@
                     <p>Dinheiro: {{ maskMoney(showTotalPaymentMethod('Dinheiro')) }}</p>
                 </div>
             </div>
+            <div class="row my-5 d-flex justify-content-center">
+                <div class="col-md-8">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+
+
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
@@ -66,6 +73,8 @@
 </template>
 
 <script>
+import Chart from 'chart.js/auto';
+
 export default {
     data() {
         return {
@@ -84,12 +93,42 @@ export default {
             },
         };
     },
+    mounted() {
+        this.chart();
+    },
     methods: {
+
+        chart() {
+            const ctx = document.getElementById('myChart');
+
+            this.chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Crédito', 'Débito', 'Pix', 'Dinheiro'],
+                    datasets: [{
+                        label: 'Formas de pagamento',
+                        data: [
+                            this.showTotalPaymentMethod('Crédito'),
+                            this.showTotalPaymentMethod('Débito'),
+                            this.showTotalPaymentMethod('Pix'),
+                            this.showTotalPaymentMethod('Dinheiro'),
+                        ],
+                        borderWidth: 1,
+                        backgroundColor: '#7553e2',
+                    }],
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        },
+                    },
+                },
+            });
+        },
         addValue() {
             this.movement.valuePerService = parseFloat(this.movement.valuePerService);
             this.movements.push({ ...this.movement });
-
-            console.log('Movements:', this.movements);
 
             if (this.movement.typeService.toLowerCase() === 'corte de cabelo') {
                 this.cuts.push({ ...this.movement });
@@ -117,7 +156,22 @@ export default {
                 paymentMethod: '',
                 valuePerService: null,
             };
+
+            this.updateChart();
         },
+
+        updateChart() {
+            if (this.chart) {
+                this.chart.data.datasets[0].data = [
+                    this.showTotalPaymentMethod('Crédito'),
+                    this.showTotalPaymentMethod('Débito'),
+                    this.showTotalPaymentMethod('Pix'),
+                    this.showTotalPaymentMethod('Dinheiro'),
+                ];
+                this.chart.update();
+            }
+        },
+
 
         showTotalValue(typeService) {
             const values = this.movements
@@ -148,7 +202,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .card {
     min-height: 331px;
 }
